@@ -1,0 +1,9 @@
+<%= form_with model: chara, method: :post, url: public_charas_path do |f| %>
+    <%= f.label '貴方の名前:' %>
+    <%= f.text_field :name %><br>
+    <br>
+    <%= f.label 'キャラの設定' %>
+    <%= f.text_area :creation, class:'form-control w-100', rows:'5' %>
+    <br>
+    <%= f.submit 'キャラ投稿' %>
+<% end %>

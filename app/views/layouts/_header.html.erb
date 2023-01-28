@@ -6,24 +6,24 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-              <%if user_signed_in?%>
+              <%if customer_signed_in?%>
               <li>
-                <%= link_to user_path(current_user), class: 'nav-link text-light' do %>
+                <%= link_to public_customer_path(current_customer), class: 'nav-link text-light' do %>
                   <i class="fas fa-home"></i> ホーム
                 <%end%>
               </li>
               <li>
-                <%= link_to users_path, class: 'nav-link text-light' do %>
+                <%= link_to public_customers_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-users"></i> 会員一覧
                 <%end%>
               </li>
               <li>
-                <%= link_to charas_path, class: 'nav-link text-light' do %>
+                <%= link_to public_charas_path, method: :get, class: 'nav-link text-light' do %>
                   <i class="fas fa-book-open"></i> 投稿
                 <%end%>
               </li>
               <li>
-                <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
+                <%= link_to destroy_customer_session_path, method: :delete, class: 'nav-link text-light' do %>
                   <i class="fas fa-sign-out-alt"></i> ログアウト
                 <%end%>
               </li>
@@ -36,17 +36,17 @@
                 <%end%>
               </li>
               <li>
-                <%= link_to home_about_path, class: 'nav-link text-light' do %>
+                <%= link_to public_home_about_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-store"></i> サイト紹介
                 <%end%>
               </li>
               <li>
-                <%= link_to new_user_registration_path, class: 'nav-link text-light' do %>
+                <%= link_to new_customer_registration_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-user-plus"></i> 会員登録
                 <%end%>
               </li>
               <li>
-                <%= link_to new_user_session_path, class: 'nav-link text-light' do %>
+                <%= link_to new_customer_session_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-sign-in-alt"></i> ログイン
                 <%end%>
               </li>

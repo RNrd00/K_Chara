@@ -1,0 +1,34 @@
+<div class="container jQuery_aplly">
+    <div class="row">
+        <h1>キャラクター作成</h1>
+    </div>
+    <div class="row">
+        <p>貴方の思い描いたキャラクターを投稿してみましょう！</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+        <h1><i class="fas fa-exclamation-triangle"></i><strong>注意事項</strong></h1>
+        <br>
+        <ul>
+            <h3><li>著作権に抵触するキャラクターの制作は行わないでください</li></h3><br>
+            <h3><li>キャラクターを用いた中傷はお止めください</li></h3><br>
+            <h3><li>適切なモラルを遵守してキャラクターの投稿をお願い致します</li></h3>
+        </ul>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <h1>キャラクター投稿画面</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <%= render 'public/charas/form', chara: @chara %>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-12">
+            <%= render 'public/charas/index', charas: @charas %>
+        </div>
+    </div>
+</div>

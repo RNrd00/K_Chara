@@ -1,0 +1,7 @@
+<% charas.each do |chara| %>
+    <div>
+        <h1>キャラ設定</h1>
+        <p>ユーザー名:<%= chara.name %></p>
+        <%= safe_join(chara.creation.split("\n"),tag(:br)) %>
+    </div>
+<% end %>
