@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   namespace :public do
     get "home/about" => "homes#about"
     resources :charas, only:[:index, :edit, :show, :create,  :destroy]
-    resources :customers
+    resources :customers, only:[:index, :edit, :show]
   end
   
   scope module: :public do

@@ -28,7 +28,9 @@
     <br>
     <div class="row">
         <div class="col-sm-12">
-            <%= render 'public/charas/index', charas: @charas %>
+            <% @charas.each do |charas| %>
+                <%= render 'public/charas/index', chara: charas %>
+            <% end %>
         </div>
     </div>
 </div>

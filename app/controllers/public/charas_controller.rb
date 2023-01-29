@@ -5,6 +5,7 @@ class Public::CharasController < ApplicationController
   end
 
   def show
+    @chara = Chara.find(params[:id])
   end
 
   def edit
