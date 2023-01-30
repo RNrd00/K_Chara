@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   
   namespace :public do
     get "home/about" => "homes#about"
-    resources :charas, only:[:index, :edit, :show, :create,  :destroy]
+    resources :charas, only:[:index, :edit, :show, :create, :destroy, :update] do
+      resources :chara_comments, only: [:create, :destroy]
+      resource :favorites, only: [:create, :destroy]
+    end
     resources :customers, only:[:index, :edit, :show]
   end
   

@@ -1,0 +1,32 @@
+<%= form_with(model: [chara, chara_comment], local: false, method: :post, url: public_chara_chara_comments_path(chara, chara_comment)) do |f| %>
+    <%= f.text_area :comment, rows:'5', placeholder: "コメントはここに入力してください", class: "w-100" %>
+    <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
+
+
+
+  <% if chara_comment.id === nil %>
+    <div class="form-group" id="star">
+      <%= f.label :rate %>
+      <%= f.hidden_field :rate, id: :review_star, class:'form-control' %>
+    </div>
+    
+    <div id="post_raty"></div>
+    <script>
+      $(document).on('turbolinks:load', function() {
+      let raty_elem = document.querySelector('#post_raty');
+      raty_elem.innerHTML = ""
+      let option = {  
+          starOn: "<%= asset_path('star-on.png') %>",
+          starOff: "<%= asset_path('star-off.png') %>",
+          starHalf: "<%= asset_path('star-half.png') %>",
+          scoreName: 'chara_comment[rate]',
+        };
+      raty(raty_elem,option);
+     });
+    </script>
+    
+   
+  <% else %>
+    <%= render "static_rate", chara: chara, chara_comment: chara_comment %>
+  <% end %>
+  <% end %>

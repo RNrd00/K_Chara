@@ -1,6 +1,25 @@
 <div class="container">
     <%= render 'public/charas/index', chara: @chara %>
     <div class="row">
-        
+        <div class="col-sm-6">
+        <% if @chara.customer == current_customer %>
+            <%= form_with model: @chara, method: :delete, url: public_chara_path(@chara) do %>
+                <br>
+                <%= text_field_tag :key, @word, placeholder: '削除パスワード(1~100の文字か数字)', class:'w-50' %><br>
+                <br>
+                <%= submit_tag '自分のキャラクターを削除する', data: {confirm: "本当に削除しますか？"} %>
+                <br>
+            <% end %>
+        <% end %>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h4 class="text-success"><%= flash[:notice] %></h4><br><br>
+            <div class="chara-comments-index">
+                <%= render 'public/chara_comments/index', chara: @chara %>
+            </div>
+                <%= render 'public/chara_comments/form', chara: @chara, chara_comment: @chara_comment %>
+        </div>
     </div>
 </div>

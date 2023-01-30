@@ -18,7 +18,10 @@
     </div>
     <br>
     <div class="row">
-        <h1>キャラクター投稿画面</h1>
+        <div class="col-sm-6">
+            <h1>キャラクター投稿画面</h1>
+            <%= flash[:notice] %><br><br>
+        </div>
     </div>
     <div class="row">
         <div class="col-sm-12">
@@ -28,6 +31,7 @@
     <br>
     <div class="row">
         <div class="col-sm-12">
+            <h1>キャラ設定</h1>
             <% @charas.each do |charas| %>
                 <%= render 'public/charas/index', chara: charas %>
             <% end %>

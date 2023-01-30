@@ -1,0 +1,23 @@
+<table>
+    <tbody>
+        <% chara.chara_comments.each do |chara_comment| %>
+        <tr>
+            <td>
+                <%= link_to public_customer_path(chara_comment.customer) do %>
+                    <%= image_tag chara_comment.customer.get_profile_image, size: "100x100" %><br>
+                    <%= chara_comment.customer.name %>
+                <% end %>
+            </td>
+            <td><%= chara_comment.comment %></td>
+            <td>
+                <% if chara_comment.customer == current_customer %>
+                    <%= link_to "削除する", public_chara_chara_comment_path(chara, chara_comment), method: :delete, class: "btn btn-danger pull-right", remote: true %>
+                <% end %>
+            </td>
+            <td>
+                <%= render "public/chara_comments/static_rate", chara_comment: chara_comment %>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

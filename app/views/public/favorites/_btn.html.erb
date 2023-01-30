@@ -1,0 +1,11 @@
+<% if chara.favorited_by?(current_customer) %>
+    <%= link_to public_chara_favorites_path(chara), method: :delete, remote: true do %>
+        <i class="fas fa-heart" aria-hidden="true" style="color: red;"></i>
+        <%= chara.favorites.count %> いいね
+    <% end %>
+<% else %>
+    <%= link_to public_chara_favorites_path(chara), method: :post, remote: true do %>
+        <i class="fas fa-heart" aria-hidden="true"></i>
+        <%= chara.favorites.count %> いいね
+    <% end %>
+<% end %>

@@ -1,9 +1,5 @@
 <div class="row">
-    <div class="col-sm-6">
-        <h1>キャラ設定</h1>
-    </div>
-</div>
-<div class="row">
+    <div class="col-sm-12">
     <div class="border border-success">
         <br>
         <div class="d-flex justify-content-around">
@@ -14,8 +10,15 @@
         <div class="col-sm-11 border border-5 border-primary rounded mx-auto">
             <%= safe_join(chara.creation.split("\n"),tag(:br)) %>
         </div>
+        <div class=<%= "favorite-" + chara.id.to_s %> >
+            <%= render 'public/favorites/btn', chara: chara %>
+        </div>
+        <div class="chara-comments-counter">
+            <%= render 'public/chara_comments/counter', chara: chara %>
+        </div>
         <% if !current_page?(public_chara_path(chara.id)) %>
             <%= link_to "キャラ詳細ページ", public_chara_path(chara.id), method: :get, class:'btn btn-success' %>
         <% end %>
+        </div>
     </div>
 </div>
