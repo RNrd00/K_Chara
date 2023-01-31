@@ -11,11 +11,11 @@
             <td><%= chara_comment.comment %></td>
             <td>
                 <% if chara_comment.customer == current_customer %>
-                    <%= link_to "削除する", public_chara_chara_comment_path(chara, chara_comment), method: :delete, class: "btn btn-danger pull-right", remote: true %>
+                    <%= link_to "削除する", public_chara_chara_comment_path(chara, chara_comment), method: :delete, class: "btn btn-danger pull-right"%>
                 <% end %>
             </td>
             <td>
-                <%= render "public/chara_comments/static_rate", chara_comment: chara_comment %>
+                <%= render "public/chara_comments/static_rate", chara_comment: chara_comment, chara: chara %>
             </td>
         </tr>
         <% end %>

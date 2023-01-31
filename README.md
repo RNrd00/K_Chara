@@ -1,24 +1,40 @@
-# README
+# KuraChara
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+### サイトテーマ
+このサイトはキャラクタークリエイトコミュニティ大百科サイトです。
+主に自身の考えたオリジナルキャラクターを創作するサイトです。
+オリジナルキャラクターによる会話や、創作者によるお話を楽しむことが出来ます。
+キャラクター作りの際に知識として役立つ用語が百科ページに纏めてありますので、是非そちらも参考にしてください。
 
-Things you may want to cover:
+### テーマを選んだ理由
+キャラクターの創作サイトと言うのは既に存在していましたが、どれも趣味の範疇を越えない代物でした。
+そこで私は、今まで人生で学んできた知識をフル活用する本格的なキャラ作成サイトを作りたいと思いました。
+ただ作るだけではなく、地頭をしっかりと使って創作を行えば、知能の向上に役立つのではないかと考えたからです。
+昨今、現実世界では頭を使う場面が多く求められてきています。
+精神論で働いて生きていく時代が終わりを迎えようとしているのです。
+なので私は少しでも知識の向上を行える事、なおかつ創作活動を通して勉学に興味を持ってもらいたいと思ったのが、このサイトを生み出した具体的な動機で御座います。
 
-* Ruby version
+### ターゲットユーザ
+- 創作活動に興味がある方
+- 自身の妄想をばら撒きたいと思っている方
+- 本当はこうしたいと言う強い渇望のある方
 
-* System dependencies
+### 主な利用シーン
+創作活動を行いたいと思った時に利用するのがオススメです。
+また、普段から頭の中で勝手にキャラクターが作られてしまう方が、このサイトで思い浮かべたキャラクターを発散するのにも適しています。
+そうすることで自分が本来、見てみたいキャラクターが文章や絵の形として目に見えるからです。
 
-* Configuration
+## 設計書
+<...>
 
-* Database creation
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- Raty(https://github.com/wbotelhos/raty)
+- Chart.js(https://www.chartjs.org/)
