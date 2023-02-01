@@ -27,7 +27,11 @@
                   <i class="fas fa-sign-out-alt"></i> ログアウト
                 <%end%>
               </li>
-              
+              <li>
+                <%= link_to public_free_comments_path, method: :get, class: 'nav-link text-light' do %>
+                  <i class="fas fa-comment"></i> フリーコメント
+                <%end%>
+              </li>
               <%else%>
               
               <li>
@@ -49,6 +53,11 @@
                 <%= link_to new_customer_session_path, class: 'nav-link text-light' do %>
                   <i class="fas fa-sign-in-alt"></i> ログイン
                 <%end%>
+              </li>
+              <li>
+                <%= link_to customer_guest_sign_in_path, class: 'nav-link text-light', method: :post do %>
+                  <i class="fa fa-user"></i> ゲストログイン
+                <% end %>
               </li>
               <%end%>
             </ul>

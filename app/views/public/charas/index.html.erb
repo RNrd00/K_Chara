@@ -23,11 +23,13 @@
             <%= flash[:notice] %><br><br>
         </div>
     </div>
+    <% if @customer.name != "guestuser" %>
     <div class="row">
         <div class="col-sm-12">
             <%= render 'public/charas/form', chara: @chara %>
         </div>
     </div>
+    <% end %>
     <br>
     <div class="row">
         <div class="col-sm-12">

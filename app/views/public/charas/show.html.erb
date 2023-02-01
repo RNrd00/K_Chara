@@ -16,10 +16,14 @@
     <div class="row">
         <div class="col-sm-12">
             <h4 class="text-success"><%= flash[:notice] %></h4><br><br>
-            <div class="chara-comments-index">
-                <%= render 'public/chara_comments/index', chara: @chara %>
-            </div>
+            <%= render 'public/chara_comments/index', chara: @chara %>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <% if @customer.name != "guestuser" %>
                 <%= render 'public/chara_comments/form', chara: @chara, chara_comment: @chara_comment %>
+            <% end %>
+        </div>
     </div>
 </div>

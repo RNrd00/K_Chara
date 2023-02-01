@@ -13,9 +13,7 @@
         <div class=<%= "favorite-" + chara.id.to_s %> >
             <%= render 'public/favorites/btn', chara: chara %>
         </div>
-        <div class="chara-comments-counter">
             <%= render 'public/chara_comments/counter', chara: chara %>
-        </div>
         <% if !current_page?(public_chara_path(chara.id)) %>
             <%= link_to "キャラ詳細ページ", public_chara_path(chara.id), method: :get, class:'btn btn-success' %>
         <% end %>

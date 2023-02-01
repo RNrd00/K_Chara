@@ -2,11 +2,13 @@ class Public::CharasController < ApplicationController
   def index
     @chara = Chara.new
     @charas = Chara.all
+    @customer = current_customer
   end
 
   def show
     @chara = Chara.find(params[:id])
     @chara_comment = CharaComment.new
+    @customer = current_customer
   end
 
   def edit

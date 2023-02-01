@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :chara_comments, only: [:create, :destroy]
       resource :favorites, only: [:create, :destroy]
     end
+    resources :free_comments, only:[:index, :create, :destroy]
     resources :customers, only:[:index, :edit, :show]
   end
   
@@ -25,4 +26,7 @@ Rails.application.routes.draw do
     
   end
   
+  devise_scope :customer do
+    post 'customer/guest_sign_in', to: 'customers/sessions#guest_sign_in'
+  end
 end

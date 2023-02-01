@@ -1,0 +1,4 @@
+<%= form_with model: free_comment, local: false, method: :post, url: public_free_comments_path do |f| %>
+    <%= f.text_area :comment, rows:'5', placeholder: "コメントはここに入力してください", class: "w-100" %>
+    <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right btn-success" %>
+<% end %>

@@ -1,0 +1,28 @@
+<div class="coutainer jQuery_aplly">
+    <h1>フリーコメントスペース</h1>
+    <p>ここでは自由にコメントする事ができます！</p>
+    <p>創作者同士の雑談などにどうぞ！</p>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="free-comments-counter">
+                <%= render 'public/free_comments/counter', free_comments: @free_comments %>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="free-comments-index">
+                <%= render 'public/free_comments/index', free_comments: @free_comments %>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <% if @customer.name != "guestuser" %>
+                <%= render 'public/free_comments/form', free_comment: @free_comment %>
+            <% end %>
+        </div>
+    </div>
+</div>
